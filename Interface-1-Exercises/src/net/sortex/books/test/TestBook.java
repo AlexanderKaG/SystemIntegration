@@ -1,6 +1,7 @@
 package net.sortex.books.test;
 
 import net.sortex.books.Book;
+import net.sortex.books.BookYearComparator;
 
 import java.util.Arrays;
 
@@ -13,8 +14,13 @@ public class TestBook {
                 new Book("Systems integration", 2022)
         };
 
+        System.out.print("Unsorted: ");
         System.out.println(Arrays.toString(books));
-        Arrays.sort(books);
+        Arrays.sort(books); // default sort
+        System.out.print("Default sorted (title): ");
+        System.out.println(Arrays.toString(books));
+        Arrays.sort(books, new BookYearComparator()); // using a comparator
+        System.out.print("Sorted on year: ");
         System.out.println(Arrays.toString(books));
     }
 }
