@@ -1,6 +1,6 @@
 package net.sortex.books;
 
-public class Book implements Comparable {
+public class Book implements Comparable<Book> {
     private String name;
     private int year;
 
@@ -14,7 +14,7 @@ public class Book implements Comparable {
     }
 
     @Override
-    public int compareTo(Object anotherBook) {
+    public int compareTo(Book anotherBook) {
         return 0;
     }
 
