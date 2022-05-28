@@ -1,8 +1,8 @@
 package com.superpower.filebrowser;
 
-public class FPMp3 extends FBFile implements FBPlayable {
+public class FBMp3 extends FBFile implements FBPlayable {
 
-    public FPMp3(String name) {
+    public FBMp3(String name) {
         super(name);
     }
 
