@@ -13,6 +13,8 @@ public class TestBook {
                 new Book("Databases", "2020"),
                 new Book("Systems integration", "2022"),
         };
+        System.out.println(Arrays.toString(books));
         Arrays.sort(books);
+        System.out.println(Arrays.toString(books));
     }
 }
