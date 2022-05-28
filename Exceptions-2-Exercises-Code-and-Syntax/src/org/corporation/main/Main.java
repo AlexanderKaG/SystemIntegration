@@ -6,7 +6,7 @@ import org.corporation.files.JavaReader;
 public class Main {
     public static void main(String[] args) {
         try {
-            JavaReader reader = new JavaReader("org/corporation/files/wrong.java");
+            JavaReader reader = new JavaReader("src/org/corporation/files/JavaReader.java");
             reader.readAndPrint();
         } catch (RuntimeException e) {
             System.err.println("Critical failure: " + e.getMessage());
