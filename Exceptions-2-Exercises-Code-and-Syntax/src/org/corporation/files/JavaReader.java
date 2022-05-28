@@ -8,21 +8,25 @@ import java.nio.file.Path;
 import java.nio.charset.Charset;
 import java.nio.file.FileSystems;
 
-public class JavaReader{
+public class JavaReader {
 
     private String file;
 
-    public JavaReader(String file){
+    public JavaReader(String file) {
         this.file = file;
     }
 
-    public void readAndPrint() throws IOException {
-        Path path = FileSystems.getDefault().getPath(file);
-        BufferedReader reader =
-                Files.newBufferedReader(path,Charset.forName("UTF-8"));
-        String line = null;
-        while ((line = reader.readLine()) != null) {
-            System.out.println(line);
+    public void readAndPrint() {
+        try {
+            Path path = FileSystems.getDefault().getPath(file);
+            BufferedReader reader =
+                    Files.newBufferedReader(path, Charset.forName("UTF-8"));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("Error reading file", e);
         }
     }
 }
