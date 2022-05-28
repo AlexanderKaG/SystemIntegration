@@ -1,4 +1,4 @@
-package com.superpower.filebrowser.utils;
+package com.superpower.filebrowser;
 
 public interface FBPlayable {
     void play();
