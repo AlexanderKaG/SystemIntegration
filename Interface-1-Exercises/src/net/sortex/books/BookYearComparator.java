@@ -6,6 +6,6 @@ public class BookYearComparator implements Comparator<Book> {
 
     @Override
     public int compare(Book o1, Book o2) {
-        return 0;
+        return o1.getYear().compareTo(o2.getYear());
     }
 }
